@@ -32,3 +32,12 @@ int main() {
     permutation(0, s);
     return 0;
 }
+
+
+Permutations of the string "abc" are given below:
+abc
+acb
+bac
+bca
+cab
+cba
