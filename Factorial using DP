@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 10004;
+long long save[N];
+
+int fact(int n) {
+    if (n == 0 || n == 1) return 1;
+    if (save[n] != -1) return save[n];
+    return save[n] = n * fact(n - 1);
+}
+
+int main() {
+    int n;
+    memset(save, -1, sizeof(save));
+    cin >> n;
+    if (n < 0) {
+        cout << "Factorial of negative numbers is undefined." << endl;
+    } else {
+        cout << "Factorial of " << n << " is " << fact(n) << endl;
+    }
+    return 0;
+}
